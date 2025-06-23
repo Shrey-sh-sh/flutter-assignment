@@ -1,0 +1,444 @@
+import 'package:flutter/material.dart';
+void main() {
+  runApp(const MaterialApp(
+    home: ProfilePage(),
+    debugShowCheckedModeBanner: false,
+  ));
+}
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Container(
+              margin: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Colors.black, width: 2),
+                borderRadius: BorderRadius.circular(12),
+
+
+              ),
+
+
+              child: Column(
+
+
+                children: [
+
+
+                  // Top Row: Back - Center Title - Settings
+
+
+                  Stack(
+
+
+                    children: [
+
+
+                      Align(
+
+
+                        alignment: Alignment.centerLeft,
+
+
+                        child: Icon(Icons.arrow_back),
+
+
+                      ),
+
+
+                      const Align(
+
+
+                        alignment: Alignment.center,
+
+
+                        child: Text(
+
+
+                          "Profile",
+
+
+                          style: TextStyle(
+
+
+                            fontSize: 20,
+
+
+                            fontWeight: FontWeight.bold,
+
+
+                          ),
+
+
+                        ),
+
+
+                      ),
+
+
+                      Align(
+
+
+                        alignment: Alignment.centerRight,
+
+
+                        child: Icon(Icons.settings, color: Colors.grey),
+
+
+                      ),
+
+
+                    ],
+
+
+                  ),
+
+
+                  const SizedBox(height: 20),
+
+
+
+
+
+                  // Profile Picture
+
+
+                  const CircleAvatar(
+
+
+                    radius: 50,
+
+
+                    backgroundImage:
+
+
+                    NetworkImage('https://jaro-website.s3.ap-south-1.amazonaws.com/2024/08/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg'),
+
+
+                  ),
+
+
+                  const SizedBox(height: 10),
+
+
+
+
+
+                  // Name & Location
+
+
+                  const Text(
+
+
+                    "Mansi Sharma",
+
+
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+
+
+                  ),
+
+
+                  const Text(
+
+
+                    "Frontend Designer\nKota(Raj.), India",
+
+
+                    textAlign: TextAlign.center,
+
+
+                    style: TextStyle(color: Colors.lightBlue),
+
+
+                  ),
+
+
+                  const SizedBox(height: 20),
+
+
+
+
+
+                  // Skills Section
+
+
+                  const Align(
+
+
+                    alignment: Alignment.centerLeft,
+
+
+                    child: Text(
+
+
+                      "Skills",
+
+
+                      style:
+
+
+                      TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+
+
+                    ),
+
+
+                  ),
+
+
+                  const SizedBox(height: 10),
+
+
+                  Wrap(
+
+
+                    spacing: 8,
+
+
+                    runSpacing: 8,
+
+
+                    children: const [
+
+
+                      Chip(label: Text("UI/UX Design")),
+
+
+                      Chip(label: Text("User Research")),
+
+
+                      Chip(label: Text("Prototyping")),
+
+
+                      Chip(label: Text("Wireframing")),
+
+
+                      Chip(label: Text("Design Systems")),
+
+
+                      Chip(label: Text("Interaction Design")),
+
+
+                      Chip(label: Text("Creative Director")),
+
+
+                      Chip(label: Text("Canva Designs")),
+
+
+                      Chip(label: Text("Design Thinking")),
+
+
+                    ],
+
+
+                  ),
+
+
+                  const SizedBox(height: 20),
+
+
+
+
+
+                  // About Section
+
+
+                  const Align(
+
+
+                    alignment: Alignment.centerLeft,
+
+
+                    child: Text(
+
+
+                      "About",
+
+
+                      style:
+
+
+                      TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+
+
+                    ),
+
+
+                  ),
+
+
+                  const SizedBox(height: 8),
+
+
+                  const Text(
+
+
+                    "Mansi is a product designer with over 3 years of experience in creating user-centered designs. She specializes in UI/UX design, user research, and prototyping. Mansi is passionate about solving complex problems and creating intuitive and engaging user experiences.",
+
+
+                  ),
+
+
+                  const SizedBox(height: 20),
+
+
+
+
+
+                  // Contact Info
+
+
+                  const Align(
+
+
+                    alignment: Alignment.centerLeft,
+
+
+                    child: Text(
+
+
+                      "Contact",
+
+
+                      style:
+
+
+                      TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+
+
+                    ),
+
+
+                  ),
+
+
+                  const SizedBox(height: 10),
+
+
+                  Row(
+
+
+                    children: const [
+
+
+                      Icon(Icons.email, size: 18),
+
+
+                      SizedBox(width: 8),
+
+
+                      Text("mansi.sharma_cs23@gla.ac.in"),
+
+
+                    ],
+
+
+                  ),
+
+
+                  const SizedBox(height: 8),
+
+
+                  Row(
+
+
+                    children: const [
+
+
+                      Icon(Icons.phone, size: 18),
+
+
+                      SizedBox(width: 8),
+
+
+                      Text("+91 9057182092"),
+
+
+                    ],
+
+
+                  ),
+
+
+                  const SizedBox(height: 8),
+
+
+                  Row(
+
+
+                    children: const [
+
+
+                      Icon(Icons.link, size: 18),
+
+
+                      SizedBox(width: 8),
+
+
+                      Text("www.linkedin.com/in/mansi-sharma-2523bb306"),
+
+
+                    ],
+
+
+                  ),
+
+
+                  const SizedBox(height: 20),
+
+
+
+
+
+                  // Bottom Divider and Icon Row
+
+
+                  const Divider(thickness: 1),
+
+
+                  const SizedBox(height: 10),
+
+
+                  Row(
+
+
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+
+                    children: const [
+
+
+                      Icon(Icons.home, size: 28),
+
+
+                      Icon(Icons.search, size: 28),
+
+
+                      Icon(Icons.add, size: 28),
+
+
+                      Icon(Icons.bookmark_border, size: 28),
+
+
+                      Icon(Icons.person_outline, size: 28),
+
+
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
